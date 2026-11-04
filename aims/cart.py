@@ -12,6 +12,7 @@ class Cart:
             print("The cart is almost full")
             return False
         self.items.append(dvd)
+        print("THE DISC HAS BEEN ADDED!")
         print("Them dia thanh cong!")
         return True
 
