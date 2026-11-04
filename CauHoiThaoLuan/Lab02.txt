@@ -1,0 +1,16 @@
+
+Thảo luận: Vì sao phải đồng bộ master trước khi PR? 
+Bởi vì:
+	- Đảm bảo nhánh đang phát triển có đầy đủ những thay đổi mới nhất từ nhánh master.
+	- Hạn chế xung đột code (Merge Conflict) khi tích hợp các thay đổi vào nhánh chính.
+	- Đảm bảo tính tương thích giữa code mới và code hiện tại của dự án.
+	- Giúp quá trình review PR dễ dàng hơn và giảm nguy cơ phát sinh lỗi khi merge.
+- Khi nào không được rebase? 
+	- Khi nhánh đã được chia sẻ với nhiều người hoặc có người khác cùng phát triển vì rebase làm thay đổi lịch sử commit.
+	- Không nên rebase các nhánh chính như master hoặc main, đặc biệt khi đã được nhiều người sử dụng.
+	- Khi dự án yêu cầu giữ nguyên lịch sử commit để dễ dàng theo dõi, kiểm tra và truy vết thay đổi.
+	- Trong những trường hợp này nên sử dụng merge để tránh ảnh hưởng đến lịch sử làm việc chung.
+- feature/* khác topic/* ra sao?
+	- feature/*: Là nhánh dùng để phát triển một tính năng mới cho dự án, thường có phạm vi tương đối rõ ràng. Ví dụ: feature/login, feature/register.
+	- topic/*: Là nhánh dùng để thực hiện một công việc hoặc chủ đề cụ thể, có thể bao gồm phát triển tính năng, sửa lỗi hoặc cải tiến code. Ví dụ: topic/fix-login-bug, topic/update-document.
+	- Điểm khác biệt chính là feature/* tập trung vào việc xây dựng tính năng mới, còn topic/* có phạm vi rộng hơn và phụ thuộc vào quy ước của từng dự án.
