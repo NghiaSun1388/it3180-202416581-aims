@@ -1,5 +1,5 @@
 MAX_NUMBERS_ORDERED = 20
-
+# TODO: implement print cart feature.
 
 class Cart:
     """Giỏ hàng chứa tối đa MAX_NUMBERS_ORDERED đĩa DVD."""
