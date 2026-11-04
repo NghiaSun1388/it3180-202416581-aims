@@ -1,0 +1,6 @@
+Thảo luận: Merge base là gì? Vì sao master/release/* phải dùng revert?
+	+ Merge base là commit chung gần nhất trong lịch sử của hai nhánh Git, tức là điểm mà từ đó hai nhánh bắt đầu phát triển theo những hướng khác nhau. Git sử dụng merge base để xác định những thay đổi trên từng nhánh khi thực hiện merge. 
+	+ Merge base giúp Git biết phần code nào đã thay đổi và xử lý việc hợp nhất giữa hai nhánh.
+	+ master và release/* là những nhánh quan trọng, thường chứa code ổn định hoặc đã được kiểm thử, nên cần giữ lịch sử commit rõ ràng.
+	+ git revert tạo một commit mới để đảo ngược thay đổi của commit trước đó mà không xóa hoặc viết lại lịch sử.
+	+ Việc này giúp các thành viên dễ dàng theo dõi, kiểm tra và truy vết những thay đổi đã được thực hiện. Tránh ảnh hưởng đến những người khác đang làm việc trên cùng nhánh.
