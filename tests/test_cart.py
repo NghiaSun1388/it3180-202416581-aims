@@ -16,6 +16,14 @@ class TestCart(unittest.TestCase):
         dvd_21 = DigitalVideoDisc(title="Test DVD 21")
         result_21 = cart.add_dvd(dvd_21)
         self.assertFalse(result_21, "Lỗi Bug: Giỏ hàng vẫn cho phép thêm đĩa thứ 21!")
+    def test_total_cost_with_discount(self):
+        cart = Cart()
+        dvd = DigitalVideoDisc(title="Test DVD", cost=100.0)
+        cart.add_dvd(dvd)
+        # Với 100$, giảm 20% thì tổng tiền phải còn 80$
+        self.assertEqual(cart.total_cost_with_discount(20), 80.0)
 
 if __name__ == '__main__':
     unittest.main()
+
+    
