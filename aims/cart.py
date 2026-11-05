@@ -16,14 +16,12 @@ class Cart:
         print("Them dia thanh cong!")
         return True
     def sort_by_title(self):
-    """Sắp xếp danh sách DVD trong giỏ hàng theo tiêu đề (A-Z)."""
-    self.items.sort(key=lambda item: item.title)
-    print("Cart sorted by title.")
+        self.items.sort(key=lambda item: item.title)
+        print("Cart sorted by title.")
 
     def sort_by_cost(self):
-    """Sắp xếp danh sách DVD trong giỏ hàng theo giá giảm dần."""
-    self.items.sort(key=lambda item: item.cost, reverse=True)
-    print("Cart sorted by cost (descending).")
+        self.items.sort(key=lambda item: item.cost, reverse=True)
+        print("Cart sorted by cost (descending).")
     
     def remove_dvd(self, dvd):
         if dvd in self.items:
