@@ -2,7 +2,7 @@
 
 ## [Unreleased]
 
-## [1.0.1] - 2026-11-05
+## [1.0.1] - 2026-11-06
 ### Fixed
 - Sửa lỗi tìm kiếm phân biệt chữ hoa/chữ thường trong hàm search_by_title (#20).
 
