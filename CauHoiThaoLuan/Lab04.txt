@@ -1,0 +1,28 @@
+LAB 04 – THẢO LUẬN GIT
+
+1.  Vì sao release/* không merge vào master?
+
+-   Nhánh release/* dùng để kiểm thử, sửa lỗi và chuẩn bị phiên bản phát
+    hành.
+-   Không merge trực tiếp nếu dự án yêu cầu kiểm duyệt thông qua Pull
+    Request hoặc quy trình riêng.
+-   Sau khi kiểm thử thành công, code mới được tích hợp vào master để
+    đảm bảo tính ổn định.
+
+2.  So sánh với GitFlow:
+
+-   GitFlow sử dụng các nhánh chính: master, develop, feature/, release/
+    và hotfix/*.
+-   feature/* dùng để phát triển tính năng; release/* dùng để chuẩn bị
+    phát hành; hotfix/* dùng để sửa lỗi khẩn cấp.
+-   Trong GitFlow, release/* thường được merge vào cả master và develop
+    sau khi phát hành.
+
+3.  Vì sao lên phiên bản 1.0.0 mà không phải 0.4.0?
+
+-   1.0.0 đánh dấu phiên bản phát hành chính thức, khi sản phẩm đã tương
+    đối hoàn thiện và sẵn sàng sử dụng.
+-   0.4.0 thường thể hiện sản phẩm vẫn đang trong giai đoạn phát triển
+    hoặc thử nghiệm.
+-   Theo Semantic Versioning, 1.0.0 là cột mốc thể hiện sản phẩm bắt đầu
+    cam kết về tính ổn định và khả năng tương thích.
