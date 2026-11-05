@@ -12,3 +12,9 @@ class DigitalVideoDisc:
     def __str__(self):
         return (f"DVD - {self.title} - {self.category} - "
                 f"{self.director} - {self.length}: {self.cost:.2f} $")
+
+
+def search_by_title(dvds, title):
+    """Tìm kiếm DVD theo tiêu đề (Không phân biệt chữ hoa / chữ thường)."""
+    keyword = title.lower().strip()
+    return [dvd for dvd in dvds if keyword in dvd.title.lower()]

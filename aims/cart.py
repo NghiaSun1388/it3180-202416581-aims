@@ -15,7 +15,14 @@ class Cart:
         print("THE DISC HAS BEEN ADDED!")
         print("Them dia thanh cong!")
         return True
+    def sort_by_title(self):
+        self.items.sort(key=lambda item: item.title)
+        print("Cart sorted by title.")
 
+    def sort_by_cost(self):
+        self.items.sort(key=lambda item: item.cost, reverse=True)
+        print("Cart sorted by cost (descending).")
+    
     def remove_dvd(self, dvd):
         if dvd in self.items:
             self.items.remove(dvd)
