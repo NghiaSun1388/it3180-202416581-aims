@@ -1,0 +1,29 @@
+LAB 05 – THẢO LUẬN GIT
+
+1.  Ưu, nhược điểm của upstream first so với release first?
+
+-   Upstream first: Sửa lỗi trên nhánh phát triển chính (master) trước,
+    sau đó lan truyền bản sửa sang các nhánh release. Ưu điểm là quản lý
+    bản sửa tập trung, tránh sửa lỗi trùng lặp. Nhược điểm là phải kiểm
+    tra và lan truyền đầy đủ bản sửa sang các phiên bản đang được bảo
+    trì.
+-   Release first: Sửa lỗi trực tiếp trên nhánh release trước, sau đó
+    lan truyền về master. Ưu điểm là xử lý nhanh lỗi trên phiên bản đang
+    phát hành. Nhược điểm là dễ quên hoặc bỏ sót việc cập nhật bản sửa
+    về nhánh phát triển chính.
+
+2.  Nếu quên lan truyền bản sửa sang release/lab05, lệnh nào ở Phần F sẽ
+    phát hiện?
+
+Dùng lệnh:
+
+git cherry -v origin/release/lab05 origin/master
+
+Lệnh này so sánh các commit trên master với release/lab05. Nếu bản sửa
+có trên master nhưng chưa có thay đổi tương đương trên release/lab05,
+Git sẽ hiển thị dấu “+” trước commit đó. Dấu “-” có nghĩa là nhánh
+release đã có commit tương đương.
+
+Lưu ý: Nên cập nhật dữ liệu từ Remote trước khi kiểm tra bằng lệnh:
+
+git fetch origin
