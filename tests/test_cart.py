@@ -22,7 +22,6 @@ class TestCart(unittest.TestCase):
         cart.add_dvd(dvd)
         # Với 100$, giảm 20% thì tổng tiền phải còn 80$
         self.assertEqual(cart.total_cost_with_discount(20), 80.0)
-
 if __name__ == '__main__':
     unittest.main()
 
